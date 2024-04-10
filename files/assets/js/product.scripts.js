@@ -51,13 +51,13 @@ $(document).ready(function(){
         let status = response.status
     
         if (status) { 
-            console.log(true,'Επιτυχής εισαγωγή του χρήστη');
-            alert(true,'Επιτυχής εισαγωγή του χρήστη');
+            console.log(true,'Επιτυχής εισαγωγή του προιοντος');
+            alert(true,'Επιτυχής εισαγωγή του προιοντος');
             $('#frmUser')[0].reset();
-            window.location.replace("http://localhost:3000/user/find.html")
+            window.location.replace("http://localhost:3000/product/find.html")
         } else {
-            console.log(false,'Πρόβλημα στην εισαγωγή του χρήστη ('+ data.message + ')');
-            alert(false,'Πρόβλημα στην εισαγωγή του χρήστη ('+ data.message + ')');
+            console.log(false,'Πρόβλημα στην εισαγωγή του προιοντος ('+ data.message + ')');
+            alert(false,'Πρόβλημα στην εισαγωγή του προιοντος ('+ data.message + ')');
             $('#frmUser')[0].reset();
             // console.log(data.message);
         }

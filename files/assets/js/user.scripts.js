@@ -5,12 +5,13 @@ $(document).ready(function(){
     type:'get',
     dataType:'JSON'
   })
+post
   .done(function(response){
     // console.log(">>", response);
     let data = response.data;
     // let status = response.status
     console.log(data)
-    
+  
     if (data.length>0) { 
         createTbody(data);
     } else {

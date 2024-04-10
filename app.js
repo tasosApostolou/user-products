@@ -4,8 +4,7 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-app.use(express.json());
-
+app.use(express.urlencoded({ extended: true }));
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger');
 
@@ -34,7 +33,7 @@ app.use('/api-docs',
   swaggerUi.setup(swaggerDocument.options)
 )
 
-// app.listen(port, ()=>{
+// app.listen(3000, ()=>{
 //   console.log("Server is up");
 // })
 
